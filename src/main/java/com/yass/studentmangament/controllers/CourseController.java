@@ -24,8 +24,13 @@ public class CourseController {
         return courseService.getAllCourses();
     }
     @DeleteMapping("/delete/{id}")
-    public String delete(@PathVariable Long id , Course course){
-        courseService.deleteCourseById(id);
-        return "Course is deleted";
+    public String delete(@PathVariable Long id ){
+        try {
+            courseService.deleteCourseById(id);
+            return "Course is deleted";
+        } catch (Exception e){
+            return "Erreur"+e.toString();
+        }
+
     }
 }
