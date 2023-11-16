@@ -26,4 +26,9 @@ public class StudentService implements IStudentService {
         studentRepository.deleteById(id);
 
     }
+
+    @Override
+    public List<Student> findByFirstName(String name) {
+        return studentRepository.findByFirstNameLike(name);
+    }
 }

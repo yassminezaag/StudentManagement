@@ -16,7 +16,7 @@ public class AuditModel {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    // Ajoutez un getter pour l'attribut 'id'
+
     public Long getId() {
         return id;
     }

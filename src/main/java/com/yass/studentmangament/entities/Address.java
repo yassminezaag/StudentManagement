@@ -1,5 +1,6 @@
 package com.yass.studentmangament.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
@@ -20,6 +21,7 @@ public class Address extends AuditModel{
 
     @OneToOne
     @JoinColumn(name = "id_student", referencedColumnName = "id")
+    @JsonBackReference
     private Student student;
 
     @Override

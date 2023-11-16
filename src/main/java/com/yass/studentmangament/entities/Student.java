@@ -24,9 +24,11 @@ public class Student extends AuditModel {
     @JoinTable(name = "student_courses",
     joinColumns = @JoinColumn(name = "id_student", referencedColumnName = "id"),
     inverseJoinColumns = @JoinColumn(name = "id_course", referencedColumnName = "id"))
+    @JsonManagedReference
     private Set<Course> courses = new HashSet<Course>();
 
     @OneToOne(mappedBy = "student")
+    @JsonManagedReference
     private Address address;
 
     @OneToMany(mappedBy = "student", cascade = CascadeType.ALL, orphanRemoval = true)

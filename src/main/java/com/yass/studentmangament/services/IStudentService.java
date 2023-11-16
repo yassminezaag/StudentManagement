@@ -8,4 +8,5 @@ public interface IStudentService {
     public Student createStudent(Student student);
     public List<Student> getAllStudents();
     public void deleteStudentById(Long id);
+    public List<Student> findByFirstName(String name);
 }

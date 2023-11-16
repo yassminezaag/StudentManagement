@@ -15,7 +15,7 @@ import org.springframework.transaction.support.TransactionTemplate;
 
 import java.util.List;
 @SpringBootApplication
-public class StudentMangamentApplication implements CommandLineRunner {
+public class StudentMangamentApplication  {
     @Autowired
     StudentService studentService;
     @Autowired
@@ -28,7 +28,7 @@ public class StudentMangamentApplication implements CommandLineRunner {
     public static void main(String[] args) {
         SpringApplication.run(StudentMangamentApplication.class, args);
     }
-
+/**
     @Override
     public void run(String... args) throws Exception {
         Student student1 = new Student();
@@ -151,4 +151,5 @@ public class StudentMangamentApplication implements CommandLineRunner {
 
 
     }
+    **/
 }

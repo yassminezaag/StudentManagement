@@ -15,8 +15,8 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Subject extends  AuditModel{
+    @Column(nullable = false, unique = true)
     private String subjName;
-
 
     @ManyToOne
     @JoinColumn(name = "student_id")
