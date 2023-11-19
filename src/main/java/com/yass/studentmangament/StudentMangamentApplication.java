@@ -1,27 +1,19 @@
 package com.yass.studentmangament;
 
-import com.yass.studentmangament.entities.*;
 import com.yass.studentmangament.services.AddressService;
 import com.yass.studentmangament.services.CourseService;
 import com.yass.studentmangament.services.StudentService;
-import com.yass.studentmangament.services.SubjectService;
-import org.hibernate.Hibernate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.transaction.annotation.Transactional;
-import org.springframework.transaction.support.TransactionTemplate;
 
-import java.util.List;
 @SpringBootApplication
 public class StudentMangamentApplication  {
     @Autowired
     StudentService studentService;
     @Autowired
     AddressService addressService;
-    @Autowired
-    SubjectService subjectService;
+
     @Autowired
     CourseService courseService;
 

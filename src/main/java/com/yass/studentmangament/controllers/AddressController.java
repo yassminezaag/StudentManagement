@@ -3,6 +3,7 @@ package com.yass.studentmangament.controllers;
 import com.yass.studentmangament.entities.Address;
 import com.yass.studentmangament.repositories.AddressRepository;
 import com.yass.studentmangament.services.IAddressService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,7 +17,7 @@ public class AddressController {
     IAddressService addressService;
 
     @PostMapping("/add")
-    public Address addAddress(@RequestBody Address address){
+    public Address addAddress(@RequestBody @Valid Address address){
         return addressService.createAddress(address);
     }
     @GetMapping("/getall")

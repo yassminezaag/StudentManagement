@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,8 +16,11 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Address extends AuditModel{
+    @NotNull(message = "must not be null !")
     private String address;
+    @NotNull(message = "must not be null !")
     private String city;
+    @NotNull(message = "must not be null !")
     private String street;
 
     @OneToOne

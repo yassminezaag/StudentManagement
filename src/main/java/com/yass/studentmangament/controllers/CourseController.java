@@ -2,6 +2,7 @@ package com.yass.studentmangament.controllers;
 
 import com.yass.studentmangament.entities.Course;
 import com.yass.studentmangament.services.ICourseService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -16,8 +17,8 @@ public class CourseController {
 
 
     @PostMapping("/add")
-    public Course createCourse(@RequestBody Course course){
-        return courseService.createCourse(course);
+    public void createCourse(@RequestBody @Valid Course course){
+         courseService.createCourse(course);
     }
     @GetMapping("/getall")
     public List<Course> getAll(){
